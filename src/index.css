@@ -1,0 +1,29 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#root {
+  height: 100vh;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.input-grid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+.input-grid button {
+  color: black;
+  background-color: thistle;
+  font-weight: bold;
+  width: 50px;
+  height: 30px;
+}
+.uguale {
+  color: thistle;
+  background-color: black;
+}
