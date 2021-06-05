@@ -10,7 +10,7 @@ function Calculator() {
   };
   return (
     <>
-      <Display value={this.valoreNumero} />
+      <Display value={valoreNumero} />
       <div>{valoreNumero}</div>
       <div className="input-grid">
         <button value="9" onClick={buttonHandler}>
