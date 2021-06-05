@@ -1,7 +1,11 @@
 import React from "react";
 
 function Display() {
-  return <></>;
+  return (
+    <>
+      <div></div>
+    </>
+  );
 }
 
 export default Display;
