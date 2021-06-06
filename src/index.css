@@ -11,29 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.operatore-grid {
+.tastiera {
   display: inline-grid;
-  grid-template-columns: auto;
-}
-.operatore-grid button {
-  color: black;
-  background-color: thistle;
-  font-weight: bold;
-  width: 50px;
-  height: 30px;
-}
-.input-grid {
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-}
-.input-grid button {
-  color: black;
-  background-color: thistle;
-  font-weight: bold;
-  width: 50px;
-  height: 30px;
-}
-.uguale {
-  color: thistle;
-  background-color: black;
+  grid-template-columns: auto auto auto auto auto;
 }

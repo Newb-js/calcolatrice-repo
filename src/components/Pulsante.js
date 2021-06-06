@@ -1,11 +1,13 @@
 import React from "react";
 
-function Pulsante() {
+const Pulsante = (props) => {
   return (
     <>
-      <button>0</button>
+      <button className="pulsante" value={props.value}>
+        {props.label}
+      </button>
     </>
   );
-}
+};
 
 export default Pulsante;

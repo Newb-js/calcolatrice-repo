@@ -1,11 +1,11 @@
 import React from "react";
 
-function Display() {
+const Display = (props) => {
   return (
     <>
-      <div> </div>
+      <div className="Display"></div>
     </>
   );
-}
+};
 
 export default Display;
