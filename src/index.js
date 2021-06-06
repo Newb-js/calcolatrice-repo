@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Calculator from "./components/Calculator";
+import Calcolatrice from "./components/Calcolatrice";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Calculator />
+    <Calcolatrice />
   </React.StrictMode>,
   document.getElementById("root")
 );

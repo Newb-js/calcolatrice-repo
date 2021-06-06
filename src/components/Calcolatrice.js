@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Display from "./Display";
 import Tastiera from "./Tastiera";
 
-function Calculator() {
+function Calcolatrice() {
   return (
     <>
       <Display />
@@ -11,4 +11,4 @@ function Calculator() {
   );
 }
 
-export default Calculator;
+export default Calcolatrice;
