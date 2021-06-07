@@ -3,7 +3,7 @@ import Display from "./Display";
 import Tastiera from "./Tastiera";
 
 function Calcolatrice() {
-  const [data, setData] = useState("pene");
+  const [data, setData] = useState("");
 
   return (
     <CalcolatriceContext.Provider value={{ data }}>
