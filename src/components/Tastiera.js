@@ -1,13 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import Pulsante from "./Pulsante";
-import { CalcolatriceContext } from "./Calcolatrice";
 
-const Tastiera = () => {
-  const { data } = useContext(CalcolatriceContext);
-
+const Tastiera = (props) => {
   return (
     <div className="tastiera">
-      <Pulsante label="C" value="clear" />
+      <Pulsante label={props.dataDrill} value="clear" />
       <Pulsante label="7" value="7" />
       <Pulsante label="4" value="4" />
       <Pulsante label="1" value="1" />
