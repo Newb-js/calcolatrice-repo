@@ -3,7 +3,7 @@ import React from "react";
 const Tastiera = (props) => {
   return (
     <div className="tastiera">
-      <Pulsante label={props.dataDrill} valorePulsante="clear" />
+      <Pulsante label="C" valorePulsante="clear" />
       <Pulsante label="7" valorePulsante="7" />
       <Pulsante label="4" valorePulsante="4" />
       <Pulsante label="1" valorePulsante="1" />
