@@ -7,7 +7,9 @@ function Calcolatrice() {
 
   calcolo = () => {
     try {
-      const risultato = eval(data);
+      var isSafe = /^[\d\+\-\*\/\s]*$/.test(data);
+      if (isSafe) const risultato = eval(data);
+      else {alert("BOOOOOOO");break;}
       setData(risultato);
     } catch (e) {
       setData("errore");
@@ -15,7 +17,7 @@ function Calcolatrice() {
   };
 
   gestoreClick = (e) => {
-    const value = e.target.getAttribute("data-value");
+    const value = e.target.getAttribute("valorePulsante");
     switch (value) {
       case "clear":
         setData("");
