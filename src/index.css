@@ -1,5 +1,6 @@
 body,
-html {
+html,
+#root {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -13,5 +14,42 @@ code {
 }
 .tastiera {
   display: inline-grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto;
+}
+.tastiera-numeri {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+.tastiera-numeri :last-child {
+  background-color: black;
+  color: whitesmoke;
+}
+.tastiera-operatori {
+  display: inline-grid;
+  grid-template-columns: auto;
+}
+.tastiera-operatori button {
+  background-color: coral;
+  color: whitesmoke;
+}
+button {
+  border-radius: 0;
+}
+.display {
+  height: 20px;
+  background-color: gray;
+  color: whitesmoke;
+  border: black 1px solid;
+}
+.calcolatrice {
+  display: inline-grid;
+  border: black 5px solid;
+  background-color: black;
+  row-gap: 5px;
+}
+#root {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

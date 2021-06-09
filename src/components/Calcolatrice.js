@@ -5,20 +5,21 @@ import Tastiera from "./Tastiera";
 function Calcolatrice() {
   const [data, setData] = useState("");
 
-  calcolo = () => {
+  const calcolo = () => {
     try {
+      let risultato;
       var isSafe = /^[\d\+\-\*\/\s]*$/.test(data);
-      if (isSafe) const risultato = eval(data);
-      else {alert("BOOOOOOO");break;}
+      if (isSafe) risultato = eval(data);
+      else alert("BOOOOOOO");
       setData(risultato);
     } catch (e) {
       setData("errore");
     }
   };
 
-  gestoreClick = (e) => {
-    const value = e.target.getAttribute("valorePulsante");
-    switch (value) {
+  const gestoreClick = (e) => {
+    const valoreCorrente = e.target.getAttribute("valorePulsante");
+    switch (valoreCorrente) {
       case "clear":
         setData("");
         break;
@@ -26,14 +27,14 @@ function Calcolatrice() {
         calcolo();
         break;
       default:
-        setData(data + value);
+        setData(data + valoreCorrente);
     }
   };
 
   return (
     <div className="calcolatrice">
-      <Display />
-      <Tastiera data={data} />
+      <Display data={data} />
+      <Tastiera data={data} gestoreClick={gestoreClick} />
     </div>
   );
 }
