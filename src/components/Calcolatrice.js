@@ -8,7 +8,7 @@ function Calcolatrice() {
   const calcolo = () => {
     try {
       let risultato;
-      var isSafe = /^[\d\+\-\*\/\s]*$/.test(data);
+      var isSafe = /^[\d\.\+\-\*\/\s]*$/.test(data);
       if (isSafe) risultato = eval(data);
       else alert("BOOOOOOO");
       setData(risultato);
@@ -18,23 +18,20 @@ function Calcolatrice() {
   };
 
   const gestoreClick = (e) => {
-    const valoreCorrente = e.target.getAttribute("valorePulsante");
-    switch (valoreCorrente) {
-      case "clear":
-        setData("");
-        break;
-      case "equal":
-        calcolo();
-        break;
-      default:
-        setData(data + valoreCorrente);
+    let valoreCorrente = e.target.getAttribute("value");
+    if (valoreCorrente === "C") {
+      setData("");
+    } else if (valoreCorrente === "=") {
+      calcolo();
+    } else {
+      setData(data + valoreCorrente);
     }
   };
 
   return (
     <div className="calcolatrice">
-      <Display data={data} />
-      <Tastiera data={data} gestoreClick={gestoreClick} />
+      <Display dataDisplay={data} />
+      <Tastiera dataTastiera={data} gestoreClickTastiera={gestoreClick} />
     </div>
   );
 }

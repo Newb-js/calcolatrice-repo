@@ -15,10 +15,15 @@ code {
 .tastiera {
   display: inline-grid;
   grid-template-columns: auto auto;
+  column-gap: 3px;
 }
 .tastiera-numeri {
   display: inline-grid;
   grid-template-columns: auto auto auto;
+}
+.tastiera-numeri button {
+  width: 26px;
+  height: 26 px;
 }
 .tastiera-numeri :last-child {
   background-color: black;
@@ -31,6 +36,8 @@ code {
 .tastiera-operatori button {
   background-color: coral;
   color: whitesmoke;
+  width: 23px;
+  height: 20px;
 }
 button {
   border-radius: 0;
